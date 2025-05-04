@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about our innovative attendance management system and the team behind it.">
+    <title>About Us - Attendance Management System</title>
+    <link href="../../../aboutuspages/aboutpage.css" rel="stylesheet">
+    <style>
+        .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            margin: 10px;
+        }
+        .back-button:hover {
+            background-color: #0056b3;
+        }
+        .button-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Back Button at the Top -->
+    <a href="javascript:history.back()" class="back-button">⬅ Back</a>
+
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle" onclick="toggleTheme()">
+        <span class="theme-icon">🌞</span>
+        <span class="theme-text">Toggle Theme</span>
+    </button>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Attendance Tracking and Monitoring System(ATMS)</h1>
+            <p> Our goal is to eliminate manual errors, reduce time consumption, and improve efficiency in attendance tracking. 
+                We believe that technology should simplify processes, enhance accuracy, and improve productivity..</p>
+        </div>
+    </section>
+
+    <!-- System Overview -->
+    <section class="system-overview">
+        <div class="container">
+            <h2 class="section-title">Our System</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <img src="../../../aboutuspages/attendance_management-copy1.png" alt=" our mission " loading="lazy">
+                    <div class="card-content">
+                        <h3>What We Offer</h3>
+                        <p>✅ Face Recognition-Based Attendance – Secure, quick, and accurate attendance tracking.<br>
+                            ✅ Real-Time Monitoring – Get live updates on attendance records.<br>
+                            ✅ Automated Reports & Insights – Generate attendance reports with ease.<br>
+                            ✅ User-Friendly Interface – Simple, intuitive, and easy to use.<br>
+                            ✅ Secure & Reliable – Protects data with advanced encryption and security features.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="../../../aboutuspages/attendanceimg2.jpg" alt="Educational institution using our attendance system" loading="lazy">
+                    <div class="card-content">
+                        <h3>Why Choose Us?</h3>
+                        <p>🔹 Accuracy & Reliability – AI-powered facial recognition ensures 99% accuracy.<br>
+                            🔹 Time-Saving – Automates attendance tracking, reducing administrative workload.<br>
+                            🔹 Seamless Integration – Easily integrates with existing systems and databases.<br>
+                            🔹 Customizable – Adaptable to different industries, from schools to businesses.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team">
+        <div class="container">
+            <h2 class="section-title">Our Team</h2>
+            <div class="team-grid">
+                <div class="team-card">
+                    <img src="../../../aboutuspages/sakshi_image1.jpeg" alt="Sarah Johnson" loading="lazy">
+                    <h3>Sakshi Kamble</h3>
+                    <p>FRONTEND DEVELOPER</p>
+                </div>
+                <div class="team-card">
+                    <img src="../../../aboutuspages/siddhi_image1.jpeg" alt="Michael Chen" loading="lazy">
+                    <h3>Siddhi Pandit</h3>
+                    <p>FRONTEND DEVELOPER</p>
+                </div>
+                <div class="team-card">
+                    <img src="../../../aboutuspages/Aishawrya_img-Photoroom.png" alt="Emily Rodriguez" loading="lazy">
+                    <h3>Aishwarya Pol</h3>
+                    <p>BACKEND DEVELOPER</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-card">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i>🏢</i>
+                        <span>AttendanceTrack Solutions Inc.</span>
+                    </div>
+                    <div class="contact-item">
+                        <i>📍</i>
+                        <span>SNDT karve road pune</span>
+                    </div>
+                    <div class="contact-item">
+                        <i>📞</i>
+                        <span>7620551630</span>
+                    </div>
+                    <div class="contact-item">
+                        <i>📧</i>
+                        <span>sakshikamble23122003@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back Button at the Bottom -->
+    <div class="button-container">
+        <!-- javascript:history.back()  its return prevoius visited page url .-->
+        <a href="javascript:history.back()" class="back-button">⬅ Back</a>
+    </div>
+
+    <!-- Theme Toggle Script -->
+    <script>
+        // Check for saved theme preference
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        document.documentElement.className = savedTheme;
+        updateThemeButton(savedTheme);
+
+        function toggleTheme() {
+            const html = document.documentElement;
+            const newTheme = html.className === 'light' ? 'dark' : 'light';
+            html.className = newTheme;
+            localStorage.setItem('theme', newTheme);
+            updateThemeButton(newTheme);
+        }
+
+        function updateThemeButton(theme) {
+            const icon = document.querySelector('.theme-icon');
+            icon.textContent = theme === 'light' ? '🌞' : '🌙';
+        }
+    </script>
+</body>
+</html>

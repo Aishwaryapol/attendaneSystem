@@ -1,0 +1,264 @@
+
+/* Theme variables */
+:root {
+    --bg-color: #f5f5f5;
+    --text-color: #333;
+    --card-bg: white;
+    --hero-gradient-start: #1a237e;
+    --hero-gradient-end: #3949ab;
+    --card-shadow: rgba(0, 0, 0, 0.1);
+    --hover-bg: #f8f9fa;
+}
+
+/* Dark theme variables */
+html.dark {
+    --bg-color: #1a1a1a;
+    --text-color: #e0e0e0;
+    --card-bg: #2d2d2d;
+    --hero-gradient-start: #000428;
+    --hero-gradient-end: #004e92;
+    --card-shadow: rgba(0, 0, 0, 0.3);
+    --hover-bg: #3d3d3d;
+}
+
+/* Theme transition */
+* {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    background: var(--card-bg);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 2px 10px var(--card-shadow);
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+.theme-toggle:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px var(--card-shadow);
+}
+
+/* Rest of your existing CSS */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, var(--hero-gradient-start), var(--hero-gradient-end));
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.hero p {
+    max-width: 600px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+/* System Overview Section */
+.system-overview {
+    padding: 80px 0;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px var(--card-shadow);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px var(--card-shadow);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card h3 {
+    color: var(--text-color);
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+/* Team Section */
+.team {
+    background-color: var(--card-bg);
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: var(--text-color);
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: var(--hero-gradient-end);
+    margin: 10px auto;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+
+.team-card {
+    text-align: center;
+    padding: 20px;
+    background: var(--bg-color);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+}
+
+.team-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 4px solid var(--card-bg);
+    box-shadow: 0 4px 10px var(--card-shadow);
+}
+
+.team-card h3 {
+    color: var(--text-color);
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+}
+
+.team-card p {
+    color: var(--text-color);
+    opacity: 0.7;
+    font-size: 0.9rem;
+}
+
+/* Contact Section */
+.contact {
+    padding: 80px 0;
+    background-color: var(--bg-color);
+}
+
+.contact-card {
+    background: var(--card-bg);
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px var(--card-shadow);
+}
+
+.contact-info {
+    display: grid;
+    gap: 20px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-item:hover {
+    background-color: var(--hover-bg);
+}
+
+.contact-item i {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    width: 30px;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .card-grid, .team-grid {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    .contact-card {
+        margin: 0 20px;
+        padding: 20px;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .theme-toggle {
+        top: 10px;
+        right: 10px;
+        padding: 8px 16px;
+    }
+}
